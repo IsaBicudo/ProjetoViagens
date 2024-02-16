@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ProjetoBancoDados.Models.Hospedagem>
+
+@{
+    ViewData["Title"] = "Hospedagem";
+}
+
+<h1>Hospedagem</h1>
+
+<p>
+    <a asp-action="Create" class="btn-primary">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HospedagemNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoHospedagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HospedagemLocal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HospedagemNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoHospedagem.TipoHospedagemNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino.DestinoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HospedagemLocal)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn-primary" asp-route-id="@item.HospedagemId"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a asp-action="Details" class="btn-primary" asp-route-id="@item.HospedagemId"><i class="fa-solid fa-circle-info"></i></a>
+                <a asp-action="Delete" class="btn-segundo" asp-route-id="@item.HospedagemId"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+﻿@model ProjetoBancoDados.Models.Transporte
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Transporte</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransporteNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransporteNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransporteAno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransporteAno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransportePlaca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransportePlaca)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn-primary" asp-route-id="@Model?.TransporteId"><i class="fa-solid fa-pen-to-square"></i></a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
+</div>

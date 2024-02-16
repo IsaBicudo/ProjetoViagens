@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjetoBancoDados.Models.Pagamento>
+
+@{
+    ViewData["Title"] = "Pagamento";
+}
+
+<h1>Pagamento</h1>
+
+<p>
+    <a asp-action="Create" class="btn-primary">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PagamentoNome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PagamentoNome)
+            </td>
+            <td>
+                  <a asp-action="Edit" class="btn-primary" asp-route-id="@item.PagamentoId"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a asp-action="Details" class="btn-primary" asp-route-id="@item.PagamentoId"><i class="fa-solid fa-circle-info"></i></a>
+                  <a asp-action="Delete" class="btn-segundo" asp-route-id="@item.PagamentoId"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,88 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: OCR A Std, monospace;
+}
+
+.display-4 {
+    font-family: OCR A Std, monospace;
+    text-align: center;
+    font-size: 3.3rem !important;
+}
+
+.logo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 96px;
+    height: 90px;
+    margin-left: 15px;
+}
+
+.btn-primary {
+    margin: 5px;
+    background: none !important;
+    color: #7BA4DB !important;
+    border: 2px #7BA4DB solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #7BA4DB !important;
+    color: white !important;
+    text-decoration: none;
+}
+
+.btn-segundo {
+    margin: 5px;
+    background: none !important;
+    color: #B70109 !important;
+    border: 2px #B70109 solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+    text-decoration: none;
+}
+
+.btn-segundo:hover {
+    background-color: #B70109 !important;
+    color: white !important;
+    border: 2px #B70109 solid !important;
+    text-decoration: none;
+}
+
+.input-validation-error {
+    border-radius: 5px !important;
+    border: 0.5px solid #7BA4DB;
+    height: 37.5px;
+}
+
+.btn-danger {
+    margin: 5px;
+    background: none !important;
+    color: #B70109 !important;
+    border: 2px #B70109 solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+    background-color: #B70109 !important;
+    color: white !important;
+    text-decoration: none;
+}

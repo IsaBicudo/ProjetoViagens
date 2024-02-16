@@ -1,0 +1,46 @@
+﻿@model ProjetoBancoDados.Models.Viagem
+
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/Imprimir.css" asp-append-version="true" />
+<div class="table">
+    <header class="espaço">
+        <div class="logo">
+            <img src="/img/logoviagem.png" alt="logo">
+        </div>
+    </header>
+    <main class="tudo">
+        <div>
+            <div class="detalhes">
+                <div>
+                    <strong>Cliente: @Html.DisplayFor(model => model.Cliente.ClienteNome)</strong>
+                </div>
+            <div class="detalhes2">
+                <div class="separar2">
+                    <strong>Destino: @Html.DisplayFor(model => model.Hospedagem.Destino.DestinoNome)</strong>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div>
+                    <strong>Hospedagem: @Html.DisplayFor(model => model.Hospedagem.HospedagemNome)</strong>
+                </div>
+                <div class="separar2">
+                    <span>Tipo de Hospedagem: @Html.DisplayFor(model => model.Hospedagem.TipoHospedagem.TipoHospedagemNome)</span>
+                </div>
+                <div>
+                    <span>Transporte: @Html.DisplayFor(model => model.Transporte.TransporteNome)</span>
+                </div>
+                <hr>
+                <div class="referencia">
+                        <strong>Valor Total: @Html.DisplayFor(model => model.ViagemValor)</strong>
+                </div>
+                <div class="final">
+                        <strong>Forma de Pagamento: @Html.DisplayFor(model => model.Pagamento.PagamentoNome)</ </strong>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

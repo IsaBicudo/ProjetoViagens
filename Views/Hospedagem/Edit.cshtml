@@ -1,0 +1,49 @@
+﻿@model ProjetoBancoDados.Models.Hospedagem
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Hospedagem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HospedagemId" />
+            <div class="form-group">
+                <label asp-for="HospedagemNome" class="control-label"></label>
+                <input asp-for="HospedagemNome" class="form-control" />
+                <span asp-validation-for="HospedagemNome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoHospedagem" class="control-label"></label>
+                <select asp-for="TipoHospedagemId" class="form-control" asp-items="ViewBag.TipoHospedagemId"></select>
+                <span asp-validation-for="TipoHospedagemId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destino" class="control-label"></label>
+                <select asp-for="DestinoId" class="form-control" asp-items="ViewBag.DestinoId"></select>
+                <span asp-validation-for="DestinoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HospedagemLocal" class="control-label"></label>
+                <input asp-for="HospedagemLocal" class="form-control" />
+                <span asp-validation-for="HospedagemLocal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,24 @@
+﻿@model ProjetoBancoDados.Models.Destino
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Destino</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DestinoNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DestinoNome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn-primary" asp-route-id="@Model?.DestinoId"><i class="fa-solid fa-pen-to-square"></i></a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
+</div>

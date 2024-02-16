@@ -1,0 +1,52 @@
+﻿.tudo {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    width: 70%;
+    height: 40%;
+    margin-left: 15%;
+}
+
+.espaço {
+    margin-top: 40px;
+}
+
+.detalhes {
+    text-align: left;
+}
+
+h1 {
+    font-family: OCR A Std, monospace;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+   text-align:center;
+}
+
+img {
+    width: 287px;
+    height: 184px;
+    object-fit: cover;
+}
+
+.detalhes2 {
+    text-align: right;
+}
+
+.referencia {
+    margin-top: 15px;
+}
+
+.final {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.separar {
+    margin-top: 9px;
+}
+
+.separar2 {
+    margin-top: 5px;
+}

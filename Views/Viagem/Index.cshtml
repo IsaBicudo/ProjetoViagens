@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ProjetoBancoDados.Models.Viagem>
+
+@{
+    ViewData["Title"] = "Viagem";
+}
+
+<h1>Viagem</h1>
+
+<p>
+    <a asp-action="Create" class="btn-primary">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hospedagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViagemData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViagemValor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ClienteNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pacotes.PacotesNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hospedagem.HospedagemNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transporte.TransporteNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViagemData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViagemValor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pagamento.PagamentoNome)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn-primary" asp-route-id="@item.ViagemId"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" class="btn-primary" asp-route-id="@item.ViagemId"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" class="btn-segundo" asp-route-id="@item.ViagemId"><i class="fa-solid fa-trash-can"></i></a>
+                    <a asp-action="Imprimir" class="btn-primary" asp-route-id="@item.ViagemId"><i class="fa-solid fa-print"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
